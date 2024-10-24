@@ -1,0 +1,81 @@
+html {
+  font-family: 'Kanit', serif;
+  font-size: 10px;
+}
+
+body {
+  background-color: rgb(240, 240, 240);
+  width: 700px;
+  margin: 0 auto;
+  padding: 0 20px 20px 20px;
+}
+
+h1 {
+  font-size: 60px;
+  text-align: center;
+  color: #000000;
+}
+
+h2 {
+  font-size: 40px;
+  color: #ffe100;
+}
+
+ul {
+  list-style: none;
+  /* Removes bullet points */
+  padding: 0;
+  /* Removes default padding */
+}
+
+p {
+  background-color: #ffffff;
+  margin-bottom: 15px;
+  line-height: 2;
+  font-size: 18px;
+}
+
+ul li {
+  background-color: #ffffff;
+  padding: 15px;
+  margin-bottom: 10px;
+  line-height: 2;
+  font-size: 18px;
+  border-left: 5px solid #ffe100;
+}
+
+a {
+  color: #004cff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  border-color: #ffe100;
+  border-width: 10px;
+  box-shadow: 0px 5px 10px 1px rgb(176, 176, 176);
+}
+
+.container {
+  background-color: #ffffff;
+  padding: 0px 12px 12px 12px;
+  margin-bottom: 8px;
+  border-radius: 17px;
+  box-shadow: 0px 5px 10px 1px rgb(176, 176, 176);
+}
+
+.image-container {
+  display: flex;
+  flex: 1;
+  padding: 20px 20px 20px;
+}
