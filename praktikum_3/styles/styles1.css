@@ -1,0 +1,37 @@
+body {
+  font-family: Arial, sans-serif;
+  transition: background-color 0.5s ease;
+  padding: 20px;
+  text-align: center;
+}
+
+#appearance {
+  text-align: center;
+  margin: 50px auto;
+  max-width: 400px;
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+button,
+select {
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.dark-mode {
+  background-color: #333;
+  color: white;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+p {
+  font-size: 16px;
+}
