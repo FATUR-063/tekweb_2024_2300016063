@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Slicing Figma</title>
+    <!--font google-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins&display=swap"
+        rel="stylesheet">
+    <!--tailwind-->
+    <link rel="stylesheet" href="../dist/tailwind.css">
+    <!--alpine js
+    <script src="//unpkg.com/alpinejs" defer></script>-->
+</head>
+
+<body>
+    <!--navbar-->
+    <nav class="lg:px-100 lg:py-6 py-8 px-8">
+        <div class="container bg-abu mx-auto">
+            <div class="flex items-center justify-between">
+                <img src="../public/image/Logo.svg" alt="" class="order-1">
+                <div class="order-3 lg:hidden sm:block">
+                    <img src="../public/icon/radix-icons_hamburger-menu.svg" alt=""
+                        class="rounded-md border-1/2 border-bgbiru py-2 px-2 grow">
+                </div>
+                <div class="order-3 hidden sm:block">
+                    <button
+                        class="bg-white py-3 px-10 grow text-fontbiru rounded-full border-1/2 border-bgbiru text-18px">About
+                        App</button>
+                </div>
+                <div class="order-2 flex hidden lg:block">
+                    <ul class="flex gap-12">
+                        <li class="text-fontbiru text-18px font-bold"><a href="">Home</a></li>
+                        <li class="text-fontabu text-18px"><a href="">Feature</a></li>
+                        <li class="text-fontabu text-18px"><a href="">About Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div x-data="{ open : false }" class="fixed bottom-0 left-0 right-0 w-full bg-abu p-4 border hidden">
+            <ul class="flex justify-between">
+                <li>
+                    <button class="flex items-center justify-center flex-col gap-1">
+                        <ion-icon name="home" class="text-2xl  text-fontbiru"></ion-icon>
+                        <span class="text-base text-fontbiru font-bold">Home</span>
+                    </button>
+
+                </li>
+
+                <li>
+                    <button class="flex items-center justify-center flex-col gap-1">
+                        <ion-icon name="layers" class="text-2xl text-fontabu opacity-50"></ion-icon>
+                        <span class="text-base text-fontabu opacity-50 font-bold">Feature</span>
+                    </button>
+
+                </li>
+
+                <li>
+                    <button class="flex items-center justify-center flex-col gap-1">
+                        <ion-icon name="person" class="text-2xl text-fontabu opacity-50"></ion-icon>
+                        <span class="text-base text-fontabu opacity-50 font-bold">About Us</span>
+                    </button>
+
+                </li>
+                <li>
+                    <button x-on:click="open = !open" class="flex items-center justify-center flex-col gap-1">
+                        <ion-icon name="ellipsis-horizontal" class="text-2xl text-fontabu opacity-50"></ion-icon>
+                        <span class="text-base text-fontabu opacity-50 font-bold">More</span>
+                    </button>
+
+                </li>
+            </ul>
+            <div x-show="open : true"
+                class="hidden absolute bottom-24 bg-white left-1/2 -translate-x-1/2 w-5/6 flex gap-4">
+                <button class="bg-white py-3 px-10 grow text-fontbiru rounded-full border border-bgbiru text-sm">About
+                    App</button>
+                <button class="bg-bgbiru py-3 px-10 grow text-white rounded-full text-sm">Download App</button>
+            </div>
+        </div>
+    </nav>
+    <!--hero sectioon-->
+    <section>
+        <div class="lg:pl-100 lg:pb-[75px] container mr-auto py-8">
+            <div class="grid grid-cols-12">
+                <div class="lg:px-0 lg:py-[99px] lg:col-span-4 col-span-12 order-1 px-8 pb-[50px]">
+                    <div>
+                        <h1
+                            class="lg:mt-0 md:text-[56px] md:mb-[43px] md:mt-[43px] lg:text-[64px] font-bold text-5xl text-fontabu leading-[85px] mb-[30px]">
+                            Manage Schedule and Task Easy </h1>
+                        <p
+                            class="lg:w-full md:mb-[43px] md:mt-[43px] md:w-3/4 text-[18px] text-fontabu2 leading-9 mb-10">
+                            Create and organize schedule and task deadline become better,
+                            easy manage and certainly no longer lagging behind schedule of activities and task</p>
+                        <button class="bg-bgbiru py-6 px-[58px] text-white rounded-full text-18px">
+                            Download App</button>
+                    </div>
+                </div>
+                <div class="col-span-12 lg:col-span-8 order-2">
+                    <div>
+                        <img src="../public/image/Hero Image.png" alt="" class="lg:w-screen w-auto">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!--fitur section-->
+    <section>
+        <div class="lg:pl-100 lg:pb-[75px] container mr-auto py-8">
+            <div class="grid grid-cols-12">
+                <div class="lg:col-span-4 col-span-12">
+                    <div class="lg:items-start flex justify-center flex-col items-center">
+                        <div class="bg-bgabu w-[100px] h-[100px] rounded-full flex items-center justify-center">
+                            <img src="../public/icon/uim_schedule.svg" alt="" class="w-14 h-14"></img>
+                        </div>
+                        <h2
+                            class="lg:text-start font-bold text-fontabu text-center mt-[30px] text-2xl leading-9 w-[350px] h-9">
+                            Set a better
+                            deadline tasks</h2>
+                        <p
+                            class="lg:text-start text-fontabu2 text-center mt-[30px] mb-[30px] text-18px leading-9 w-[350px] h-[72px]">
+                            You can
+                            make your duty deadlines better and more orderly</p>
+                    </div>
+                </div>
+                <div class="lg:col-span-4 col-span-12">
+                    <div class="lg:items-start flex justify-center flex-col items-center">
+                        <div class="bg-bgabu w-[100px] h-[100px] rounded-full flex items-center justify-center">
+                            <img src="../public/icon/uim_layer-group.svg" alt="" class="w-14 h-14"></img>
+                        </div>
+                        <h2
+                            class="lg:text-start font-bold text-center mt-[30px] text-2xl text-fontabu h-9 w-[350px] leading-9">
+                            Manage the tasks
+                            so
+                            easily</h2>
+                        <p
+                            class="lg:text-start text-fontabu2 text-center mt-[30px] mb-[30px] text-18px leading-9 w-[350px] h-[72px]">
+                            You can
+                            manage
+                            the deadlines and the schedule becomes easy</p>
+                    </div>
+                </div>
+                <div class="lg:col-span-4 col-span-12">
+                    <div class="lg:items-start flex justify-center flex-col items-center">
+                        <div class="bg-bgabu w-[100px] h-[100px] rounded-full flex items-center justify-center">
+                            <img src="../public/icon/ri_notification-fill.svg" alt="" class="w-14 h-14"></img>
+                        </div>
+                        <h2
+                            class="lg:text-start font-bold text-center mt-[30px] text-2xl text-fontabu h-9 w-[350px] leading-9">
+                            Wouldn’t miss
+                            notifications</h2>
+                        <p
+                            class="lg:text-start text-fontabu2 text-center mt-[30px] text-18px leading-9 w-[350px] h-[72px]">
+                            Of course
+                            you
+                            will always get the tasks and schedule notifications</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--advantage section-->
+    <section>
+        <div class="container mx-auto py-8">
+            <div class="grid grid-cols-12">
+                <div class="col-span-12">
+                    <div class="flex flex-row">
+                        <div class="w-full bg-bgabu rounded-r-3xl">
+                            <img src="../public/image/Image.png" alt="" class="">
+                        </div>
+                        <div class="lg:px-100 flex gap-6 flex-col px-8">
+                            <h2 class="lg:text-4xl h-20 font-bold text-2xl leading-10 text-fontabu">
+                                Set up task and schedule with a best features
+                            </h2>
+                            <p class="lg:h-44 flex items-center h-[218px] text-18px leading-9 text-fontabu2">
+                                The best feature makes you better, with the latest technology to meet your needs. Of
+                                course,
+                                with such features as organizing schedules and leading assignments, it will make you
+                                easier,
+                                So get the application now !
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-12">
+                    <div class="flex flex-row">
+                        <div class="lg:px-100 flex gap-6 flex-col px-8">
+                            <h2 class="lg:text-4xl h-20 font-bold text-2xl leading-10 text-fontabu">
+                                Get the highest priority application notification
+                            </h2>
+                            <p class="lg:h-44 flex items-center h-[218px] text-18px leading-9 text-fontabu2">
+                                The best feature makes you better, with the latest technology to meet your needs. Of
+                                course,
+                                with such features as organizing schedules and leading assignments, it will make you
+                                easier,
+                                So get the application now !
+                            </p>
+                        </div>
+                        <div class="w-full bg-bgabu rounded-l-3xl">
+                            <img src="../public/image/Image (1).png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--user paging section-->
+    <section>
+        <div class="container mx-auto px-8 py-8">
+            <div class="bg-bgbiru flex flex-col justify-center items-center rounded-3xl gap-12">
+                <h2 class="lg:text-4xl font-bold text-white text-center leading-9 text-2xl pt-12 w-[276]">
+                    Download an app now and the various benefits you will get immediately
+                </h2>
+                <div class="flex flex-col justify-center items-center gap-5 pb-12">
+                    <button class="bg-white py-6 px-10 grow text-fontbiru rounded-full text-18px">
+                        Download App
+                    </button>
+                    <button
+                        class="bg-fontbiru py-6 px-10 grow text-white rounded-full border-1/2 border-white text-18px">
+                        About App
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--testimonial section-->
+    <section>
+        <div class="container px-8 py-8">
+            <div class="grid grid-cols-12">
+                <div class="lg:block lg:col-span-6 col-span-12 hidden">
+                    <div class="bg-bgabu rounded-r-3xl">
+                        <img src="../public/image/Testimonial Img.png" alt="">
+                    </div>
+                </div>
+                <div class="lg:col-span-6 col-span-12">
+                    <div class="lg:p-100 flex flex-col gap-9">
+                        <h2 class="text-2xl font-bold text-fontabu">What do they think</h2>
+                        <div class="flex flex-row gap-10">
+                            <img src="../public/image/Profile.png" alt="">
+                            <div class="flex flex-col justify-center items-center gap-4">
+                                <h3 class="text-18px font-bold text-fontabu">Samantha Sench</h3>
+                                <p class="text-sm text-fontabu2">Student at University</p>
+                            </div>
+                        </div>
+                        <p class="text-18px text-fontabu">
+                            “ Hi, it’s Samantha. After using it made me a lot of benefits, starting with convenience of
+                            setting
+                            a deadline of tasks and schedule after that the app is very simple using. “
+                        </p>
+                        <div class="lg:justify-start flex flex-row justify-center gap-5">
+                            <img src="../public/icon/la_arrow-left.svg" alt="">
+                            <img src="../public/icon/la_arrow-right.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--footer section-->
+    <section>
+        <div class="lg:pl-100 container w-full px-8 py-8">
+            <div class="grid grid-cols-12">
+                <div class="lg:col-span-4 lg:flex-row flex flex-col col-span-12">
+                    <div class="lg:flex-col lg:py-0 pt-0 pb-10">
+                        <div class="pt-0 pb-5">
+                            <img src="../public/image/Logo.svg" alt="" class="lg:w[380px] lg:h[100px] w-[201px] h-[65px]">                            
+                        </div>
+                        <div>
+                            <p class="text-18px text-fontabu2">
+                                Task deadlines and scheduling applications with various benefits and advantages
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-5 col-span-12">
+                    <div class="flex flex-row justify-center gap-16 lg:py-0 pt-0 pb-10">
+                        <div class="flex flex-col gap-7">
+                            <h3 class="text-2xl text-black font-bold">
+                                Sitemaps
+                            </h3>
+                            <ul class="text-18px text-fontabu2">
+                                <li><span class="text-fontbiru">•</span> Home </li>
+                                <li><span class="text-fontbiru">•</span> Features </li>
+                                <li><span class="text-fontbiru">•</span> About Us </li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-col gap-7">
+                            <h3 class="text-2xl text-black font-bold">
+                                Advantages
+                            </h3>
+                            <ul class="text-18px text-fontabu2">
+                                <li><span class="text-fontbiru">•</span> Set Task Better </li>
+                                <li><span class="text-fontbiru">•</span> Easy Manage </li>
+                                <li><span class="text-fontbiru">•</span> Get Notification </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="lg:col-span-2 col-span-12">
+                    <div class="flex flex-col gap-9 lg:py-0 pt-0 pb-10">
+                        <h3 class="text-2xl text-black font-bold">Follow Us</h3>
+                        <div class="flex flex-row gap-10">
+                            <img src="../public/icon/uim_facebook-f.svg" alt="">
+                            <img src="../public/icon/uim_twitter.svg" alt="">
+                            <img src="../public/icon/uim_linkedin-alt.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+</html>
